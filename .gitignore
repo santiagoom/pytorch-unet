@@ -19,3 +19,18 @@ gpu-config.txt
 data/
 log/
 cache/
+
+
+
+
+
+
+# origin
+*.pyc
+data/
+__pycache__/
+checkpoints/
+*.pth
+*.jpg
+SUBMISSION*
+venv/
