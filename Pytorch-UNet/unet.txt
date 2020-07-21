@@ -1,0 +1,12 @@
+
+
+
+
+
+python predict.py -i image.jpg -o output.jpg
+
+To predict a multiple images and show them without saving them:
+
+python predict.py -i image1.jpg image2.jpg --viz --no-save
+
+python predict.py -m checkpoints/CP_epoch5.pth -i test/29bb3ece3180_11.jpg -o test/29bb3ece3180_11_mask.jpg

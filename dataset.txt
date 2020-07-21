@@ -8,8 +8,11 @@ kaggle competitions download -c carvana-image-masking-challenge -f train_masks.z
 29bb3ece3180_11.jpg
 metadata.csv.zip
 sample_submission.csv.zip
+
+
 test.zip
 test_hq.zip
+
 train.zip
 train_hq.zip
 train_masks.csv.zip
@@ -23,4 +26,4 @@ kaggle competitions download -c carvana-image-masking-challenge -f
 kaggle competitions download -c carvana-image-masking-challenge -f
 kaggle competitions download -c carvana-image-masking-challenge -f
 kaggle competitions download -c carvana-image-masking-challenge -f
-kaggle competitions download -c carvana-image-masking-challenge -f
+kaggle competitions download -c carvana-image-masking-challenge -f 29bb3ece3180_11.jpg
