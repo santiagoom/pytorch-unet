@@ -8,5 +8,27 @@ python predict.py -i image.jpg -o output.jpg
 To predict a multiple images and show them without saving them:
 
 python predict.py -i image1.jpg image2.jpg --viz --no-save
-
 python predict.py -m checkpoints/CP_epoch5.pth -i test/29bb3ece3180_11.jpg -o test/29bb3ece3180_11_mask.jpg
+
+nohup python train_ins.py -s 1 >> train_ins_scale1_2020_7_21_2_19_14_37.out &
+nohup python train_ins_1.py -s 1 >> train_ins_1_scale1_2020_7_21_2_19_14_37.out &
+
+2020_7_21_2_19_14_37
+
+
+
+INFO: Using device cuda
+INFO: Network:
+	3 input channels
+	1 output channels (classes)
+	Bilinear upscaling
+INFO: Creating dataset with 5088 examples
+INFO: Starting training:
+        Epochs:          5
+        Batch size:      1
+        Learning rate:   0.1
+        Training size:   4580
+        Validation size: 508
+        Checkpoints:     True
+        Device:          cuda
+        Images scaling:  0.5

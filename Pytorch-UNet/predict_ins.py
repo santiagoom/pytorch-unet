@@ -10,10 +10,12 @@ from torchvision import transforms
 
 from unet import UNet
 from utils.data_vis import plot_img_and_mask
-from utils.dataset import BasicDataset
+# from utils.dataset import BasicDataset
+from utils.dataset_ins import BasicDataset
 
 device_num = 1
 os.environ['CUDA_VISIBLE_DEVICES'] = str(device_num)
+
 
 def predict_img(net,
                 full_img,
@@ -85,7 +87,7 @@ def get_output_filenames(args):
     if not args.output:
         for f in in_files:
             pathsplit = os.path.splitext(f)
-            out_files.append("{}_OUT{}".format(pathsplit[0], pathsplit[1]))
+            out_files.append("{}_OUT_{}_{}".format(pathsplit[0], args.scale, pathsplit[1]))
     elif len(in_files) != len(args.output):
         logging.error("Input files and output files are not of the same length")
         raise SystemExit()

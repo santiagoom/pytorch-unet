@@ -19,10 +19,13 @@ from torch.utils.data import DataLoader, random_split
 
 dir_img = 'data/imgs/'
 dir_mask = 'data/masks/'
-dir_checkpoint = 'checkpoints/'
+dir_checkpoint = 'checkpoints_2020_7_21_2_19_14_37/'
 
 device_num = 0
 os.environ['CUDA_VISIBLE_DEVICES'] = str(device_num)
+
+print("dir_checkpoint:", dir_checkpoint)
+print("device_num:", dir_checkpoint)
 
 
 def train_net(net,
@@ -41,7 +44,8 @@ def train_net(net,
     val_loader = DataLoader(val, batch_size=batch_size, shuffle=False, num_workers=8, pin_memory=True, drop_last=True)
 
     # writer = SummaryWriter(comment=f'LR_{lr}_BS_{batch_size}_SCALE_{img_scale}')
-    writer = SummaryWriter(log_dir="./log/2020-7-20-1-20-17-51", comment=f'LR_{lr}_BS_{batch_size}_SCALE_{img_scale}')
+    writer = SummaryWriter(log_dir="./log/checkpoints_2020_7_21_2_19_14_37",
+                           comment=f'LR_{lr}_BS_{batch_size}_SCALE_{img_scale}')
     global_step = 0
 
     logging.info(f'''Starting training:
